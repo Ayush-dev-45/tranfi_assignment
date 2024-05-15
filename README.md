@@ -5,7 +5,7 @@ It uses mongoose to connect to MongoDb database(TranFi_Learning, collection- stu
 This api stores the students  rollNumber, fullName, enrolledCourse ( enrolledOn: Date, courseCode: string, couseName: string), email,
 address (street: string,  city : string,  state: string, + country: string, zipCode: number) and dateOfBirth 
 
-db.js has function connectDb() for connecting MongoDB, Student.js has schema and student Model.
+db.js has function connectDb() for connecting MongoDB, Student.js has schema and student Model and server.js is the main file where all the /api resides
 
 The Student Schema is as follows {rollNumber:{
 									type: String,
