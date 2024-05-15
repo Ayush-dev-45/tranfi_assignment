@@ -28,15 +28,18 @@ The Student Schema is as follows {rollNumber:{
 									dateOfBirth: Date}
 
 1.Adding a student
+
 	It takes data {fullName,enrolledOn, courseName, courseCode...}= req.body, and generates coursecode from the first two alphabets of courseName (eg: for Mechanical Enginenenring 
 	courseCode is 'ME') and generates rollNumber based on year, course in format TF22ME0001, and this rollNumber is incremental as asked in bonus part.
 	
 	Note: Giving courseCode based on courseName is compulsory in {req.body}
 	
 2.Listing all students
+
 	I've used simple get request to list all the students 
 	
 3.Updating and Deleting 
+
 	I've used two separate methods for updating and deleting.
 		For updating I've used the unique id from mongoDB database
 		For Deleting I've used rollNumber for deleting a particular student 
@@ -47,11 +50,13 @@ The Student Schema is as follows {rollNumber:{
 	It contains all 3 BONUS points given in the assignmnet
 	
 4.For Paging and search
+
 	I've modified the paging by using multiple queries i.e. it takes {page, limit, name} from req.query and shows no. of limits as per page (eg: page=2, limit=5 it shows page 2 with
 	5 students list on it)
 	As per name, if name="Ad", it lists all the students with names starting with "ad" and it is case insensitive here
 	
 5.For Csv 
+
 	I've used a very basic logic for creating csv, and used res.header('content-type', 'txt/csv') for download
 	
 	
